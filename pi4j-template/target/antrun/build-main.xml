@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="maven-antrun-" default="main">
+  <target name="main">
+    <sshexec trust="true" password="admin123" port="22" usepty="true" suppresssystemerr="true" host="10.2.235.37" failonerror="false" suppresssystemout="true" useSystemIn="false" command="sudo killall -9 java" username="admin" />
+    <sshexec trust="true" password="admin123" port="22" host="10.2.235.37" command="mkdir --parents /home/admin/deploy; rm -f /home/admin/deploy/*" username="admin" />
+    <scp trust="true" todir="admin:admin123@10.2.235.37:/home/admin/deploy" port="22">
+      <fileset dir="C:\Users\rober\Documents\Universidade\3er Semestre\AD\AD_2324\pi4j-template\target/distribution" />
+    </scp>
+    <sshexec trust="true" password="admin123" port="22" usepty="true" host="10.2.235.37" failonerror="false" useSystemIn="true" command="sudo java  --module-path /home/admin/deploy --module pt.tpsi.ad.pi4j/pt.tpsi.ad.pi4j.ButtonLedApp " username="admin" />
+  </target>
+</project>

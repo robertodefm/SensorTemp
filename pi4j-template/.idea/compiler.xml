@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Annotation profile for Pi4J CrowPi Examples" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <option name="project" value="com.pi4j.crowpi/PI4JTemplate" />
+        <processorPath useClasspath="false">
+          <entry name="$MAVEN_REPOSITORY$/info/picocli/picocli-codegen/4.7.4/picocli-codegen-4.7.4.jar" />
+          <entry name="$MAVEN_REPOSITORY$/info/picocli/picocli/4.7.4/picocli-4.7.4.jar" />
+        </processorPath>
+        <module name="PI4JTemplate" />
+      </profile>
+    </annotationProcessing>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="PI4JTemplate" options="-Aproject=com.pi4j.crowpi/PI4JTemplate" />
+    </option>
+  </component>
+</project>
